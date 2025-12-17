@@ -1,5 +1,5 @@
 {
   "redirects": [
-    { "source": "/", "destination": "/api", "permanent": true }
+    { "source": "/api", "destination": "/api", "permanent": true }
   ]
 }
