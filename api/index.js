@@ -28,4 +28,7 @@ app.use("/users", async (req, res, next) => {
 
 app.use("/users", require("../routes/UsersRoutes"));
 
-module.exports = app;
+// Export as serverless handler
+module.exports = (req, res) => {
+  app(req, res);
+};
