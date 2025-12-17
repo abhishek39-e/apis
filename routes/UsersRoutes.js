@@ -18,6 +18,14 @@ router.get("/", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+router.get("/", async (req, res) => {
+  try {
+    const users = await User.find();
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
 
 router.get("/:id", async (req, res) => {
   try {
@@ -94,14 +102,7 @@ router.put("/", async (req, res) => {
   }
 });
 
-router.get("/", async (req, res) => {
-  try {
-    const users = await User.find();
-    res.json(users);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
+
 
 // delete user
 router.delete("/", async (req, res) => {
