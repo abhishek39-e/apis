@@ -15,7 +15,7 @@ async function connectDB() {
 }
 
 // ROOT ROUTE
-app.get("/", async (req, res) => {
+app.get("/api", async (req, res) => {
   await connectDB();
   res.send("API running 🚀");
 });
@@ -32,3 +32,4 @@ app.use("/users", require("../routes/UsersRoutes"));
 module.exports = (req, res) => {
   app(req, res);
 };
+
