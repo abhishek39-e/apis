@@ -1,5 +1,4 @@
+
 {
-  "redirects": [
-    {  "source": "/(.*)", "destination": "/api/index.js" }
-  ]
+  "version": 2
 }
