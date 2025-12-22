@@ -45,7 +45,6 @@ async function connectDB() {
   if (isConnected) return;
   await mongoose.connect(process.env.MONGO_URI);
   isConnected = true;
-  console.log("Mongo connected");
 }
 
 app.get("/api", async (req, res) => {
@@ -58,9 +57,11 @@ app.use("/api/users", async (req, res, next) => {
   next();
 });
 
-app.use("/api/users", require("../routes/UsersRoutes")); 
+app.use("/api/users", require("./routes/UsersRoutes"));
 
 module.exports = app;
+
+
 
 
 
