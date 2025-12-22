@@ -58,8 +58,9 @@ app.use("/api/users", async (req, res, next) => {
   next();
 });
 
-app.use("/api/users", require("../routes/UsersRoutes"));
+app.use("/api/users", require("../routes/UsersRoutes")); 
 
 module.exports = app;
+
 
 
