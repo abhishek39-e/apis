@@ -1,4 +1,4 @@
-const { configDotenv } = require("dotenv");
+ui,lconst { configDotenv } = require("dotenv");
 const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
